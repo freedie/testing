@@ -2,12 +2,15 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 		int array[] = { 5, 7, 1, 9, 15, 2 };
-		bubbleSort(array);
-		for(int i=0;i<array.length;i++)
-			System.out.print(array[i]+" ");
+		int array2[] = { 5, 7, 1, 9, 15, 2, 12 };
+		arrayMax(array);
+		arrayMin(array);
+		arrayMiddle(array);
+		arrayMiddle(array2);
 	}
 
 	public static void bubbleSort(int[] arr) {
+
 
 		boolean swapped = true;
 
@@ -37,5 +40,22 @@ public class BubbleSort {
 		}
 
 	}
-
+	
+	public static void arrayMax(int [] arr){
+		bubbleSort(arr);
+		System.out.println(arr[arr.length-1]);
+	}
+	
+	public static void arrayMin(int [] arr){
+		bubbleSort(arr);
+		System.out.println(arr[0]);
+	}
+	
+	public static void arrayMiddle(int [] arr){
+		bubbleSort(arr);
+		if(arr.length%2==0)
+			System.out.println("Array doesn't contain an odd number of elements");
+		else
+			System.out.println(arr[arr.length/2-1]);
+	}
 }
